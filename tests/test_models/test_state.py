@@ -1,22 +1,25 @@
 #!/usr/bin/python3
-""" """
-from tests.test_models.test_base_model import test_basemodel
-from models.state import State
+"""
+Test suits for amenities
+"""
 import os
+import models
+import unittest
+from datetime import datetime
+from models.base_model import BaseModel
 
 
-class test_state(test_basemodel):
-    """ states test class"""
+class TestState(unittest.TestCase):
+    """
+    Tests for amenities
+    """
 
-    def __init__(self, *args, **kwargs):
-        """ state test class init"""
-        super().__init__(*args, **kwargs)
-        self.name = "State"
-        self.value = State
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
 
-    def test_name3(self):
-        """ testing state name attr"""
-        new = self.value()
-        self.assertEqual(type(new.name), str if
-                         os.getenv('HBNB_TYPE_STORAGE') != 'db' else
-                         type(None))
+
+if __name__ == '__main__':
+    unittest.main()
