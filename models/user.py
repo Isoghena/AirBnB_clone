@@ -1,20 +1,11 @@
 #!/usr/bin/python3
-"""
-Defines the User class.
-"""
+"""This module creates a User class"""
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Represent a User
+    """Class for managing user objects"""
 
-    Attributes:
-        email (str): user email
-        password (str): user password
-        first_name (str): first name
-        last_name (str): last name
-
-    """
     email = ""
     password = ""
     first_name = ""
